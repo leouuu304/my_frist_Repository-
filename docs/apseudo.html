@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <button id ="button"> click </button>
+    <h1 id = "target">Hello World</h1>
+    <hr>
+    <div>
+        <button id = "getContent">getContent</button>
+        <button id = "setContent">setContent</button>
+    </div>
+
+    <hr>
+
+    <div>
+        <button id="getPic">getPic</button>
+        <button id="setPic">setPic</button>
+    </div>
+    <img id = "pic" src="cake.jpg" alt="">
+
+    <script>
+
+        let target = document.querySelector("#target");
+
+        let getContent = document.querySelector("#getContent")
+
+        let setContent = document.querySelector("#setContent")
+
+        let button = document.querySelector("#button")
+        //  Dom 物件
+
+        console.log(button);
+
+        button.addEventListener("click", function(){
+            console.log("click");
+        })
+
+        button.addEventListener("mouseenter", function(){
+            console.log("mouse enter");
+        })
+
+        button.addEventListener("mouseleave", function(){
+            console.log("mouse leave");
+        })
+
+        console.log(target.innerText);
+
+        getContent.addEventListener("click",function()
+        {
+            console.log(target.innerText);
+        })
+
+        setContent.addEventListener("click",function()
+        {
+            console.log(target.innerText = "New Content");
+        })
+
+        getPic.addEventListener("click", function()
+        {
+            console.log(pic.src);
+        })
+
+        setPic.addEventListener("click", function()
+        {
+            pic.src = "favicon.png";
+        })
+
+    </script>
+</body>
+</html>
